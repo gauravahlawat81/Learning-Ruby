@@ -22,7 +22,7 @@ class PortfoliosController < ApplicationController
     def edit
         @portfolio_item = Portfolio.find(params[:id])
     end
-    
+
     def update
         @portfolio_item = Portfolio.find(params[:id])
     
@@ -33,5 +33,9 @@ class PortfoliosController < ApplicationController
             format.html { render :edit }
           end
         end
-      end
+    end
+
+    def show
+        @portfolio_item = Portfolio.find(params[:id])
+    end
 end
